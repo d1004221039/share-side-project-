@@ -18,7 +18,7 @@ export type ProjectApiType = {
 export const dataApi = createApi({
   reducerPath: "dataApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3001/",
+    baseUrl: "https://share-side-project-data-default-rtdb.firebaseio.com/",
   }),
   endpoints: (builder) => ({
     // getPokemonByName: builder.query<Pokemon, string>({
@@ -26,7 +26,7 @@ export const dataApi = createApi({
     DesignApi: builder.query<any, string>({
       query: (id) => {
         if (id == "all") {
-          return `design`;
+          return `design/.json`;
         } else {
           return `design/${id}`;
         }
@@ -35,16 +35,16 @@ export const dataApi = createApi({
     ProposalApi: builder.query<any, string>({
       query: (id) => {
         if (id == "all") {
-          return `proposal`;
+          return `proposal/.json`;
         } else {
           return `proposal/${id}`;
         }
       },
     }),
-    ProjectApi: builder.query<ProjectApiType, string>({
+    ProjectApi: builder.query<ProjectApiType[], string>({
       query: (id) => {
         if (id == "all") {
-          return `project`;
+          return `project/.json`;
         } else {
           return `project/${id}`;
         }

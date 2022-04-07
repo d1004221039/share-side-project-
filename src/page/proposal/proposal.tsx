@@ -10,7 +10,7 @@ import {
 import { useAppDispatch, useAppSelector } from "../../redux/app/hooks";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useProjectApiQuery } from "../../redux/server/dataAPI";
+import { useProjectApiQuery, ProjectApiType } from "../../redux/server/dataAPI";
 
 const Proposal: React.FC = () => {
   const go = useNavigate();
@@ -31,10 +31,33 @@ const Proposal: React.FC = () => {
     select.islogin == false && dispatch(callMessage(MessageState.notLogin));
   }, [select.islogin]);
 
+  //取得資料
   let url = useParams();
   const item = url.item == undefined ? "empty" : url.item.slice(1);
   const contribute = url.item == undefined ? "empty" : url.item.slice(1, 2);
-  const { data, error, isLoading } = useProjectApiQuery(item);
+  // const { data, error, isLoading } = useProjectApiQuery(item);
+  const { data, error, isLoading } = useProjectApiQuery("all");
+
+  let newData: ProjectApiType = {
+    id: "",
+    avatarImg: "",
+    name: "",
+    title: "",
+    abstract: "",
+    featuredImg: "",
+    date: "",
+    hashTag: [""],
+    peopleNum: "",
+    hyperlink: "",
+    userID: "",
+  };
+
+  data?.forEach((value) => {
+    if (value.id == item) {
+      newData = value;
+      return;
+    }
+  });
 
   //編輯圖片
   const [imgToggle, setImgToggle] = useState(item == "empty" ? true : false);
@@ -47,7 +70,7 @@ const Proposal: React.FC = () => {
   //專案名
 
   const [projectName, setProjectName] = useState(
-    item == "empty" ? "" : data?.name
+    item == "empty" ? "" : newData?.name
   );
 
   return (
@@ -113,7 +136,7 @@ const Proposal: React.FC = () => {
                         ? setImgSize(false)
                         : setImgSize(true);
                     }}
-                    src={data?.featuredImg}
+                    src={newData?.featuredImg}
                     alt=""
                   />
                   <button
@@ -206,7 +229,7 @@ const Proposal: React.FC = () => {
               <p className="mr-[10px] text-[16px]">視覺搞</p>
             </div>
             <textarea
-              value={data?.hyperlink}
+              value={newData?.hyperlink}
               className="w-full h-[104px] bg-[#F6F7F9] rounded-[8px] text-[16px] mb-[6px] pt-[15px]  pl-[14px] xl:pl-[20px] md:pl-[18px]"
             />
 
@@ -220,7 +243,7 @@ const Proposal: React.FC = () => {
               <p className="mr-[10px] text-[16px]">專案說明</p>
             </div>
             <textarea
-              value={data?.abstract}
+              value={newData?.abstract}
               className="w-full h-[256px] bg-[#F6F7F9] rounded-[8px] text-[16px]  mb-[6px] pt-[15px]  pl-[14px] xl:pl-[20px] md:pl-[18px]"
             />
             <p className="text-[#919191] text-[14px]">
