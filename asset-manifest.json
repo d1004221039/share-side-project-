@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/share-side-project-/static/css/main.03776e3e.css",
-    "main.js": "/share-side-project-/static/js/main.4cf810ce.js",
+    "main.js": "/share-side-project-/static/js/main.c306b33e.js",
     "index.html": "/share-side-project-/index.html",
     "static/media/Checkbox2.svg": "/share-side-project-/static/media/Checkbox2.c7a4cca5a96ad5331e03.svg",
     "static/media/Checkbox1.svg": "/share-side-project-/static/media/Checkbox1.d5402d560f67447252f7.svg",
     "main.03776e3e.css.map": "/share-side-project-/static/css/main.03776e3e.css.map",
-    "main.4cf810ce.js.map": "/share-side-project-/static/js/main.4cf810ce.js.map"
+    "main.c306b33e.js.map": "/share-side-project-/static/js/main.c306b33e.js.map"
   },
   "entrypoints": [
     "static/css/main.03776e3e.css",
-    "static/js/main.4cf810ce.js"
+    "static/js/main.c306b33e.js"
   ]
 }
