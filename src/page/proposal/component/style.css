@@ -1,0 +1,18 @@
+.inputCSS {
+  display: none;
+}
+
+.inputCSS + label span {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background: url("../../../../public/Icon/Checkbox1.svg");
+  margin-right: 8px;
+}
+.inputCSS:checked + label span {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background: url("../../../../public/Icon/Checkbox2.svg");
+  margin-right: 8px;
+}
