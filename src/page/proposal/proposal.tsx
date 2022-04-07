@@ -93,7 +93,7 @@ const Proposal: React.FC = () => {
       </div>
       {/* 主體 */}
       <div className="w-full pt-[24px] md:pt-[36px] xl:pt-[102px] md:pb-[46px] xl:pb-[136px]">
-        <div className=" mx-auto w-full md:w-[95.83%] xl:w-[78%] h-[1414px] bg-white rounded-[16px] overflow-hidden pt-[214px] pl-[30px] pr-[30px] md:pl-[40px] md:pr-[41px] xl:pl-[93px] xl:pr-[124px] md:pt-[163px] pb-[55px] relative">
+        <div className=" mx-auto w-full md:w-[95.83%] xl:w-[78%] h-[1514px] bg-white rounded-[16px] overflow-hidden pt-[214px] pl-[30px] pr-[30px] md:pl-[40px] md:pr-[41px] xl:pl-[93px] xl:pr-[124px] md:pt-[163px] pb-[55px] relative">
           {/* 圖片 */}
           <div className=" absolute top-[39px] md:top-[51px] left-[8.33%] md:left-[65.5%] xl:left-[67.5%] w-full md:w-[25.67%] h-[180px] md:h-[238px] 2xl:left-[72.4%]   ">
             <div className=" overflow-hidden w-[153px] h-[153px] md:w-[201px] md:h-[192px] bg-[#EDEEF0] rounded-[13px] relative inline-block md:block">
