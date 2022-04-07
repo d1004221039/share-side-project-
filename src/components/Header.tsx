@@ -119,7 +119,7 @@ const Header = () => {
             }}
             className="w-[58px] h-[58px] rounded-full bg-[#313131] fixed left-[79.44%] top-[84.37%] flex justify-center items-center z-20 md:hidden"
           >
-            <img src="/Icon/po.svg" alt="" />
+            <img src="Icon/po.svg" alt="" />
           </button>
         )}
       </div>
