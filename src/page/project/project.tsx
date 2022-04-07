@@ -86,7 +86,7 @@ const Project: React.FC = () => {
               <div className="w-full  md:flex  md:justify-start md:items-end pb-[21px]">
                 <img
                   className=" w-[88px] h-[31px] "
-                  src="/projectPage/cc2.png"
+                  src="projectPage/cc2.png"
                   alt=""
                 />
                 <p className="pt-[13px] md:pl-[7px]">

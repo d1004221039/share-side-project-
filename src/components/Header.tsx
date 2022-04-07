@@ -68,7 +68,7 @@ const Header = () => {
               >
                 <img
                   className="mr-[11px] w-[21px] h-[20px]"
-                  src="/Icon/po.svg"
+                  src="Icon/po.svg"
                   alt=""
                 />
                 <p className="text-white font-H5_TC text-[14px] ">
