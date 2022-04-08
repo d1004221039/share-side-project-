@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# 分享視覺專案-React 切版練習
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 視覺來源：[Doris KT](https://www.facebook.com/K.T1003)
+- 專案框架：React
+- 使用語言：TypeScript
+- 使用套件：Router、Redux、tailwindCSS
+- DataAPI: - 開發：json server - 上傳：firebase
+  > ※沒有接後端
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 說明
 
-### `npm start`
+- 專案說明：主要練習 TypeScript 及 React。學習組件寫法，將共用組建分開寫，並使用 Router 進行頁面的切換，Redux 進行狀態管理及 Fetch 資料，進而實現一些功能的作用
+- 學習成果：除了熟悉去拆分組件之外，開始熟悉一些型態的用法，以前 JS 並不太了解型態的宣告這部分，透過 TS 的學習，開始會在撰寫前思考這些問題，降低程式報錯的機會，更學習使用 2 元 3 元的條件式、enum...等以前沒用過的寫法，最大的收穫就是學會使用 Router、Redex、Tailwind CSS，這些在開發上幫助非常的大
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 程式組件、頁面介紹
 
-### `npm test`
+共用組件：head、bottom、loading、message
+三個頁面：caseAndDesign、project、proposal
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Router
 
-### `npm run build`
+Router 管理三個頁面
+路徑管理檔案：routerConfig.ts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+ {
+    path: "/",
+    element: <CaseAndDesign />,
+  },
+ {
+    path: "/project",
+    element: <Project />,
+  },
+  {
+    path: "/project:item",
+    element: <Project />,
+  },
+  {
+    path: "/proposal",
+    element: <Proposal />,
+  },
+  {
+    path: "/proposal:item",
+    element: <Proposal />,
+  },
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Redux
 
-### `npm run eject`
+Redux 使用狀態管理及 RTK 來 Fetch API
+檔案：hooks.ts、store.ts、Slice.ts、dataAPI.ts
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 狀態:
+  1 islogin:是否登入
+  2 userID: 使用者 ID
+  3 pageState: 使用頁面
+  4 messageToggle: 訊息開關
+  5 messageState: 訊息狀態
