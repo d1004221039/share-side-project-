@@ -7,7 +7,8 @@
 - DataAPI:
   - 開發：json server
   - 上傳：firebase
-    > ※沒有接後端
+
+> ※沒有接後端
 
 ---
 
@@ -20,13 +21,13 @@
 
 ## 程式組件、頁面介紹
 
-共用組件：head、bottom、loading、message
-三個頁面：caseAndDesign、project、proposal
+- 共用組件：head、bottom、loading、message
+- 三個頁面：caseAndDesign、project、proposal
 
 ### Router
 
-Router 管理三個頁面
-路徑管理檔案：routerConfig.ts
+- Router 管理三個頁面
+- 路徑管理檔案：routerConfig.ts
 
 ```
  {
@@ -55,10 +56,10 @@ Router 管理三個頁面
 
 ### Redux
 
-Redux 使用狀態管理及 RTK 來 Fetch API
-檔案：hooks.ts、store.ts、Slice.ts、dataAPI.ts
+- Redux 使用狀態管理及 RTK 來 Fetch API
+- 檔案：hooks.ts、store.ts、Slice.ts、dataAPI.ts
 
-- 狀態:
+* 狀態:
   1. islogin:是否登入
   2. userID: 使用者 ID
   3. pageState: 使用頁面
