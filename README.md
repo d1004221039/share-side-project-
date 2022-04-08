@@ -4,8 +4,10 @@
 - 專案框架：React
 - 使用語言：TypeScript
 - 使用套件：Router、Redux、tailwindCSS
-- DataAPI: - 開發：json server - 上傳：firebase
-  > ※沒有接後端
+- DataAPI:
+  - 開發：json server
+  - 上傳：firebase
+    > ※沒有接後端
 
 ---
 
@@ -57,8 +59,8 @@ Redux 使用狀態管理及 RTK 來 Fetch API
 檔案：hooks.ts、store.ts、Slice.ts、dataAPI.ts
 
 - 狀態:
-  1 islogin:是否登入
-  2 userID: 使用者 ID
-  3 pageState: 使用頁面
-  4 messageToggle: 訊息開關
-  5 messageState: 訊息狀態
+  1. islogin:是否登入
+  2. userID: 使用者 ID
+  3. pageState: 使用頁面
+  4. messageToggle: 訊息開關
+  5. messageState: 訊息狀態
